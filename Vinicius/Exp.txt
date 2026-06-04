@@ -1,0 +1,73 @@
+EXPLICAÇÃO DO QUE EU FIZ NO CSS - VINICIUS
+============================================
+
+O QUE FOI FEITO NO CSS
+----------------------
+Criei o arquivo style.css para dar uma cara nova pro Portal PHB Vagas.
+Até então o site só usava Bootstrap puro e tava sem identidade visual
+própria. Meu CSS veio pra complementar o Bootstrap, deixando tudo mais
+bonito sem quebrar nada que já funcionava.
+
+Eu não mexi em nenhum HTML, nem nos arquivos JavaScript do Diego, Kayo
+ou Hemerson. Só adicionei um link pro style.css no index.html e pronto.
+
+COMO OS CARDS FORAM ESTILIZADOS
+--------------------------------
+Os cards de vagas (tanto na Home quanto na página de vagas) receberam:
+- Borda arredondada de 14px
+- Sombra suave
+- Efeito de "levantar" quando passa o mouse (translateY -6px)
+- Sombra azulada no hover pra dar destaque
+- Borda que muda de cor no hover
+- Um espaçamento interno confortável
+
+A ideia foi fazer cada vaga parecer um cartão物理 mesmo, que o usuário
+sinta que pode "pegar" e clicar.
+
+COMO OS FORMULÁRIOS FORAM ORGANIZADOS
+--------------------------------------
+O formulário de candidatura já tinha uma estrutura boa com Bootstrap.
+Eu só melhorei:
+- Borda mais arredondada nos inputs (10px)
+- Cor de fundo levemente cinza nos campos
+- Destaque em azul quando o campo tá selecionado (focus)
+- Label em negrito e mais escuro
+- Card do formulário com sombra mais elegante e padding maior
+
+Ficou mais convidativo pra preencher.
+
+COMO OS BOTÕES FORAM PADRONIZADOS
+-----------------------------------
+Criei um estilo padrão pra todos os botões:
+- Border radius de 8px
+- Fonte em negrito e maiúscula
+- Efeito de elevação no hover
+- Sombra suave
+- Transição suave em tudo
+
+Os botões principais (btn-primary) ganharam fundo com gradiente azul.
+Os outline ficaram com borda azul e mudam pra fundo azul no hover.
+Os secundários tão com gradiente cinza.
+
+COMO FOI FEITA A ADAPTAÇÃO PARA CELULARES
+------------------------------------------
+Fiz duas quebras de responsividade:
+- 768px (tablets): texto diminui, padding reduz, botões menores
+- 576px (celulares): tudo fica mais compacto, botões ocupam largura
+  total, textos menores, footer centralizado
+
+Testei visualmente e as telas ficam boas tanto no PC quanto no celular.
+
+COMO AS CORES FORAM ESCOLHIDAS
+-------------------------------
+Usei uma palheta profissional de portal de empregos:
+- Azul (#0d6efd) como cor principal -> passa confiança e
+  profissionalismo, igual muitos sites de emprego usam
+- Branco (#ffffff) e cinza claro (#f4f6f9) pro fundo -> mantém
+  a página limpa e legível
+- Cinza escuro (#2d3436) pros textos -> confortável de ler
+- Azul escuro (#1a2a3a) pros títulos -> dá peso visual
+- Verde (#4caf50) na mensagem de sucesso -> associado a "deu certo"
+
+A combinação ficou parecida com sites como LinkedIn e Indeed, que
+também usam azul como cor principal.

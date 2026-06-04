@@ -1,0 +1,332 @@
+# Explicação dos Principais Trechos do CSS
+
+## Projeto: PHB Vagas
+
+### Responsável pela estilização: Vinícius
+
+---
+
+# 1. Importação da Fonte
+
+```css
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+```
+
+### O que faz?
+
+Esse código importa a fonte Inter diretamente do Google Fonts.
+
+### Por que foi utilizado?
+
+A fonte Inter possui uma aparência moderna e melhora a leitura dos textos do sistema.
+
+---
+
+# 2. Reset Geral da Página
+
+```css
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+```
+
+### O que faz?
+
+Aplica configurações em todos os elementos da página.
+
+### Explicação
+
+* margin: 0 remove margens automáticas.
+* padding: 0 remove espaçamentos automáticos.
+* box-sizing: border-box facilita o controle dos tamanhos dos elementos.
+
+### Objetivo
+
+Padronizar o comportamento dos navegadores.
+
+---
+
+# 3. Configuração do Body
+
+```css
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f4f6f9;
+    color: #2d3436;
+    line-height: 1.7;
+    min-height: 100vh;
+}
+```
+
+### O que faz?
+
+Define a aparência geral da página.
+
+### Explicação
+
+* font-family define a fonte.
+* background-color define o fundo.
+* color define a cor padrão dos textos.
+* line-height aumenta o espaçamento entre linhas.
+* min-height ocupa toda a altura da tela.
+
+### Objetivo
+
+Criar um visual limpo e confortável para leitura.
+
+---
+
+# 4. Estilização dos Títulos
+
+```css
+h1, h2, h3, h4, h5, h6 {
+    color: #1a2a3a;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+}
+```
+
+### O que faz?
+
+Personaliza todos os títulos.
+
+### Explicação
+
+* color altera a cor.
+* font-weight deixa o texto em negrito.
+* letter-spacing aumenta o espaço entre letras.
+
+### Objetivo
+
+Dar destaque aos títulos do sistema.
+
+---
+
+# 5. Barra de Navegação
+
+```css
+.navbar {
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.12);
+    padding: 14px 0;
+}
+```
+
+### O que faz?
+
+Adiciona sombra e espaçamento à barra de navegação.
+
+### Objetivo
+
+Separar visualmente o menu do restante da página.
+
+---
+
+# 6. Seção Principal da Home
+
+```css
+section.container.mt-5:first-of-type {
+    background: linear-gradient(
+        135deg,
+        #f0f4ff 0%,
+        #e8edff 50%,
+        #dce3ff 100%
+    );
+
+    border-radius: 16px;
+}
+```
+
+### O que faz?
+
+Cria o destaque principal da página inicial.
+
+### Explicação
+
+* linear-gradient cria um degradê.
+* border-radius arredonda os cantos.
+
+### Objetivo
+
+Chamar atenção para a apresentação do portal.
+
+---
+
+# 7. Cards das Vagas
+
+```css
+.card {
+    border-radius: 14px;
+    background: #ffffff;
+}
+```
+
+### O que faz?
+
+Personaliza os cartões das vagas.
+
+### Objetivo
+
+Organizar melhor as informações das oportunidades.
+
+---
+
+# 8. Efeito ao Passar o Mouse
+
+```css
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 35px rgba(13, 110, 253, 0.12);
+}
+```
+
+### O que faz?
+
+Quando o usuário passa o mouse sobre um card, ele sobe levemente.
+
+### Explicação
+
+* transform move o card.
+* box-shadow cria uma sombra maior.
+
+### Objetivo
+
+Melhorar a interação visual.
+
+---
+
+# 9. Botões
+
+```css
+.btn {
+    border-radius: 8px;
+    font-weight: 600;
+    padding: 10px 22px;
+}
+```
+
+### O que faz?
+
+Define um padrão para todos os botões.
+
+### Objetivo
+
+Manter a identidade visual do sistema.
+
+---
+
+# 10. Botão Principal
+
+```css
+.btn-primary {
+    background: linear-gradient(
+        135deg,
+        #0d6efd,
+        #0a58ca
+    );
+}
+```
+
+### O que faz?
+
+Cria um degradê azul nos botões principais.
+
+### Objetivo
+
+Destacar ações importantes.
+
+---
+
+# 11. Campos do Formulário
+
+```css
+.form-control {
+    border-radius: 10px;
+    padding: 14px 18px;
+    border: 2px solid #e0e0e0;
+}
+```
+
+### O que faz?
+
+Personaliza os campos de entrada.
+
+### Objetivo
+
+Melhorar a aparência e a usabilidade do formulário.
+
+---
+
+# 12. Campo Selecionado
+
+```css
+.form-control:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 4px rgba(13, 110, 253, 0.1);
+}
+```
+
+### O que faz?
+
+Destaca o campo quando o usuário clica nele.
+
+### Objetivo
+
+Mostrar visualmente qual campo está sendo preenchido.
+
+---
+
+# 13. Mensagem de Sucesso
+
+```css
+.alert-success {
+    background: linear-gradient(
+        135deg,
+        #e8f5e9,
+        #c8e6c9
+    );
+
+    border: 2px solid #4caf50;
+}
+```
+
+### O que faz?
+
+Estiliza a mensagem exibida após uma candidatura.
+
+### Objetivo
+
+Informar claramente que a operação foi concluída com sucesso.
+
+---
+
+# 14. Responsividade
+
+```css
+@media (max-width: 576px) {
+
+    .btn {
+        width: 100%;
+    }
+
+}
+```
+
+### O que faz?
+
+Aplica regras específicas para celulares.
+
+### Explicação
+
+Quando a largura da tela for menor que 576px, os botões passam a ocupar toda a largura disponível.
+
+### Objetivo
+
+Melhorar a experiência em dispositivos móveis.
+
+---
+
+# Conclusão
+
+O CSS foi desenvolvido para transformar o PHB Vagas em um portal visualmente mais organizado e profissional. As principais alterações foram feitas nos títulos, cards, formulários, botões e adaptação para celulares. O foco foi criar uma interface simples, agradável e relacionada ao tema de oportunidades de emprego, sem alterar a estrutura dos arquivos desenvolvidos pelos demais integrantes do grupo.

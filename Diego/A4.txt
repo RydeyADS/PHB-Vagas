@@ -1,0 +1,426 @@
+# Explicação dos Principais Trechos do JavaScript
+
+## Projeto: PHB Vagas
+
+### Responsável: Diego
+
+---
+
+# 1. Importação dos Arquivos
+
+```javascript
+import { vagas } from '../Kayo/dados.js';
+import { gerarCardVaga } from '/Kayo/funcoes.js';
+```
+
+### O que faz?
+
+Importa informações de outros arquivos do projeto.
+
+### Explicação
+
+* `vagas` contém todas as vagas cadastradas.
+* `gerarCardVaga()` gera o HTML de cada vaga.
+
+### Objetivo
+
+Separar o projeto em módulos para facilitar a organização.
+
+---
+
+# 2. Criação da Função Principal
+
+```javascript
+export function carregarVagas() {
+```
+
+### O que faz?
+
+Cria a função responsável por exibir toda a tela de vagas.
+
+### Objetivo
+
+Centralizar toda a lógica relacionada à listagem de vagas.
+
+---
+
+# 3. Montagem da Estrutura HTML
+
+```javascript
+let html = `
+    <div class="container mt-5">
+        <h2 class="mb-4 text-center">
+            Vagas Disponíveis
+        </h2>
+`;
+```
+
+### O que faz?
+
+Cria o HTML da página utilizando Template Strings.
+
+### Explicação
+
+Em vez de escrever diretamente no HTML, a estrutura é criada dinamicamente pelo JavaScript.
+
+### Objetivo
+
+Permitir gerar conteúdo automaticamente.
+
+---
+
+# 4. Percorrendo as Vagas
+
+```javascript
+vagas.forEach(vaga => {
+    html += gerarCardVaga(vaga);
+});
+```
+
+### O que faz?
+
+Percorre todas as vagas cadastradas.
+
+### Explicação
+
+Para cada vaga encontrada:
+
+1. Chama a função `gerarCardVaga()`.
+2. Cria um card.
+3. Adiciona esse card ao HTML.
+
+### Objetivo
+
+Mostrar todas as vagas cadastradas automaticamente.
+
+---
+
+# 5. Inserindo o Conteúdo na Página
+
+```javascript
+document.querySelector('#app').innerHTML = html;
+```
+
+### O que faz?
+
+Substitui o conteúdo da página pelo HTML gerado.
+
+### Explicação
+
+* `querySelector()` localiza o elemento.
+* `innerHTML` insere o conteúdo.
+
+### Objetivo
+
+Exibir as vagas para o usuário.
+
+---
+
+# 6. Selecionando os Botões de Candidatura
+
+```javascript
+document.querySelectorAll('.btn-candidatar')
+```
+
+### O que faz?
+
+Procura todos os botões de candidatura da página.
+
+### Explicação
+
+Cada vaga possui seu próprio botão.
+
+### Objetivo
+
+Permitir adicionar eventos de clique.
+
+---
+
+# 7. Evento de Clique
+
+```javascript
+botao.addEventListener('click', () => {
+```
+
+### O que faz?
+
+Escuta o clique do usuário.
+
+### Explicação
+
+Quando o usuário clicar no botão:
+
+* Uma ação será executada.
+
+### Objetivo
+
+Responder às interações do usuário.
+
+---
+
+# 8. Carregamento do Formulário
+
+```javascript
+fetch('/candidatura.html')
+```
+
+### O que faz?
+
+Busca o arquivo de candidatura.
+
+### Explicação
+
+O navegador faz uma requisição para carregar o formulário.
+
+### Objetivo
+
+Exibir o formulário apenas quando necessário.
+
+---
+
+# 9. Conversão da Resposta
+
+```javascript
+.then(resposta => resposta.text())
+```
+
+### O que faz?
+
+Transforma a resposta recebida em texto.
+
+### Objetivo
+
+Permitir inserir o HTML na página.
+
+---
+
+# 10. Exibição do Formulário
+
+```javascript
+document.querySelector('#app').innerHTML = htmlFormulario;
+```
+
+### O que faz?
+
+Troca a tela de vagas pela tela de candidatura.
+
+### Objetivo
+
+Mostrar o formulário para o candidato.
+
+---
+
+# 11. Evento de Envio do Formulário
+
+```javascript
+document
+    .getElementById('formCandidatura')
+    ?.addEventListener('submit', (evento) => {
+```
+
+### O que faz?
+
+Detecta quando o usuário envia o formulário.
+
+### Objetivo
+
+Processar os dados preenchidos.
+
+---
+
+# 12. Evitando o Recarregamento da Página
+
+```javascript
+evento.preventDefault();
+```
+
+### O que faz?
+
+Impede que o navegador recarregue a página.
+
+### Explicação
+
+Por padrão, um formulário atualiza a página ao ser enviado.
+
+### Objetivo
+
+Manter a experiência mais fluida.
+
+---
+
+# 13. Captura dos Dados
+
+```javascript
+const nome =
+    document.getElementById('nome').value;
+
+const email =
+    document.getElementById('email').value;
+
+const telefone =
+    document.getElementById('telefone').value;
+```
+
+### O que faz?
+
+Lê os valores digitados pelo usuário.
+
+### Objetivo
+
+Obter os dados da candidatura.
+
+---
+
+# 14. Exibição dos Dados no Console
+
+```javascript
+console.log('Nome:', nome);
+console.log('Email:', email);
+console.log('Telefone:', telefone);
+```
+
+### O que faz?
+
+Mostra as informações no console do navegador.
+
+### Objetivo
+
+Facilitar testes e depuração durante o desenvolvimento.
+
+### Observação
+
+No sistema atual os dados não são salvos em banco de dados, apenas exibidos no console.
+
+---
+
+# 15. Tela de Sucesso
+
+```javascript
+document.querySelector('#app').innerHTML = `
+    <div class="alert alert-success">
+```
+
+### O que faz?
+
+Substitui o formulário por uma mensagem de confirmação.
+
+### Objetivo
+
+Informar que a candidatura foi enviada.
+
+---
+
+# 16. Botão Voltar para Home
+
+```javascript
+document
+    .getElementById('voltarHome')
+    .addEventListener('click', () => {
+        location.reload();
+    });
+```
+
+### O que faz?
+
+Recarrega a página.
+
+### Explicação
+
+O usuário retorna para a tela inicial.
+
+### Objetivo
+
+Facilitar a navegação.
+
+---
+
+# 17. Botão Voltar da Tela de Vagas
+
+```javascript
+document
+    .getElementById('btnVoltar')
+    ?.addEventListener('click', () => {
+        location.reload();
+    });
+```
+
+### O que faz?
+
+Permite retornar para a página inicial.
+
+### Objetivo
+
+Melhorar a navegação do sistema.
+
+---
+
+# Conceitos de JavaScript Utilizados
+
+Durante o desenvolvimento foram utilizados diversos conceitos importantes:
+
+### Módulos
+
+```javascript
+import
+export
+```
+
+Permitem dividir o sistema em vários arquivos.
+
+---
+
+### Funções
+
+```javascript
+function carregarVagas()
+```
+
+Utilizadas para organizar a lógica do programa.
+
+---
+
+### Arrays
+
+```javascript
+vagas.forEach(...)
+```
+
+Permitem armazenar várias vagas.
+
+---
+
+### Eventos
+
+```javascript
+addEventListener()
+```
+
+Permitem responder às ações do usuário.
+
+---
+
+### Manipulação do DOM
+
+```javascript
+querySelector()
+getElementById()
+innerHTML
+```
+
+Permitem modificar elementos da página.
+
+---
+
+### Requisições
+
+```javascript
+fetch()
+```
+
+Permite carregar arquivos dinamicamente.
+
+---
+
+# Conclusão
+
+O arquivo `vagas.js` é responsável por controlar toda a navegação relacionada às vagas de emprego. Ele exibe as oportunidades cadastradas, permite que o usuário abra o formulário de candidatura, captura os dados preenchidos e apresenta uma mensagem de sucesso após o envio. Além disso, utiliza conceitos importantes de JavaScript moderno, como módulos, eventos, manipulação do DOM e requisições com Fetch API.

@@ -1,0 +1,87 @@
+================================================================================
+  ARQUIVO: Hemerson/Exp.txt
+  INTEGRANTE: Hemerson
+  RESPONSABILIDADE: Home
+  DISCIPLINA: Trabalho acadêmico — Portal de Vagas
+================================================================================
+
+O QUE EU FIZ
+=============
+
+Criei a nova tela inicial (Home) do Portal de Vagas PHB com um layout
+completo contendo navbar, seção hero, vagas em destaque, seção de
+benefícios e rodapé.
+
+
+MUDANÇA DE RESPONSABILIDADE
+============================
+
+Antes: Eu era responsável pela tela de Vagas e navegação.
+Agora:  Eu sou responsável pela tela Home.
+
+Meu trabalho foi criar uma Home visualmente rica e profissional para
+o portal, inspirando confiança nos visitantes.
+
+
+ARQUIVO QUE CRIEI: Hemerson/home.html
+======================================
+
+O que esse arquivo faz:
+  - Exibe a página inicial completa do Portal de Vagas PHB
+
+Seções do arquivo:
+
+  1. NAVBAR (barra de navegação)
+     - Fundo azul (bg-primary)
+     - Logo "PHB Vagas" com imagem SVG
+     - Links: Home, Vagas, Empresas, Contato
+     - Menu responsivo com botão toggler em celulares
+
+  2. HERO (seção principal)
+     - Título grande "ENCONTRE SUA PRÓXIMA OPORTUNIDADE"
+     - Descrição do portal
+     - Botões "Ver Vagas" (com id="btnVagas" para o JavaScript)
+       e "Empresas Parceiras"
+
+  3. VAGAS EM DESTAQUE
+     - Grid com 6 cards de vagas fictícias
+     - Cada card: cargo, empresa, local e botão "Ver Detalhes"
+     - Layout responsivo (3 colunas em desktop, 1 em celular)
+
+  4. POR QUE USAR O VAGAS PHB?
+     - 3 cards com ícones e explicações dos benefícios
+     - Cards com bordas arredondadas (rounded-4)
+
+  5. FOOTER (rodapé)
+     - Fundo azul (bg-primary) com texto branco
+     - Colunas: Sobre, Links Rápidos e Contato
+     - Copyright no final
+
+Classes Bootstrap que usei:
+  - Nav: navbar, navbar-expand-lg, navbar-dark, bg-primary,
+         navbar-toggler, collapse, navbar-nav, ms-auto
+  - Hero: container, display-3, fw-bold, lead, btn-outline-primary
+  - Cards: card, h-100, shadow, border-0, rounded-4,
+           card-title, card-text
+  - Grid: row, col-md-4
+  - Footer: bg-primary, text-white, list-unstyled,
+            text-decoration-none
+
+
+POR QUE MEU TRABALHO É IMPORTANTE
+===================================
+
+A Home é a primeira impressão que o usuário tem do site. Uma página
+inicial bonita, organizada e profissional faz com que o visitante
+confie no portal e queira explorar as vagas disponíveis.
+
+
+O QUE EU APRENDI
+=================
+
+  - Como criar uma navbar responsiva com Bootstrap
+  - Como organizar seções em uma página completa
+  - Como usar o sistema de grid do Bootstrap para layouts complexos
+  - Como criar cards com sombras e bordas arredondadas
+  - Como estruturar um footer com links e informações de contato
+  - O conceito de design responsivo (adaptável a diferentes telas)

@@ -1,0 +1,47 @@
+esse arquivo é basicamente o "cérebro" da parte de vagas do site.
+
+quando o usuário clica em "ver vagas", é a função `carregarvagas()` que entra em ação. ela monta toda a tela das vagas usando javascript e joga esse conteúdo dentro da div `#app`.
+
+primeiro ela pega a lista de vagas criada pelo kayo no arquivo `dados.js`. depois usa a função `gerarcard()` do arquivo `funcoes.js` para criar um card bonito para cada vaga. é tipo uma máquina de fazer cards: você entrega uma vaga e ela devolve um card prontinho.
+
+depois que as vagas aparecem na tela, o código fica espionando os botões "candidatar-se". quando alguém clica em um deles, ele carrega o arquivo `candidatura.html` usando `fetch()`. resumindo: ele troca a tela de vagas pela tela do formulário sem precisar atualizar a página inteira.
+
+quando o formulário aparece, o código coloca um evento no botão de envio. quando o usuário preenche nome, email e telefone e clica em enviar:
+
+* impede a página de recarregar
+* pega os dados digitados
+* mostra tudo no console do navegador
+* exibe uma mensagem de sucesso
+
+é como se ele falasse:
+
+"beleza, recebi seus dados. agora vou fingir que sou uma empresa séria e agradecer pela candidatura"
+
+depois aparece um botão "voltar para home". quando ele é clicado, o site recarrega e volta para a página inicial.
+
+também existe um botão "voltar para home" na tela de vagas para o usuário não ficar perdido igual eu fico jogando valorant.
+
+resumindo o que esse arquivo faz:
+
+* mostra as vagas
+* cria os cards das vagas
+* abre o formulário de candidatura
+* captura os dados digitados
+* mostra os dados no console
+* exibe mensagem de sucesso
+* permite voltar para a página inicial
+
+sem esse arquivo o site teria uma home bonita, mas não faria praticamente nada além de existir e olhar para você.
+so lembrando que a parte d eimport onde fica os dados e as funcoes, esses elemntos é apenas de organização. não afeta nada na estrutura do site em si
+o kayo tem que descobri como organizar por conta que sem ele o site da um erro de syntaxerror que afirma o seguinte
+"The requested module '/Kayo/funcoes.js' does not provide an export named 'gerarCard'"
+
+eu sei como resolver mais eu nao digo kkkkkkkkkkkkk
+
+
+
+observação:
+
+algumas partes do código foram feitas com ajuda de ia, principalmente na parte de imports, exports, uso do fetch() e correção de alguns erros que apareceram durante o desenvolvimento.
+
+o projeto foi adaptado, testado e organizado por nós, incluindo a divisão das tarefas, alterações no código, estrutura das telas e funcionamento geral do sistema.

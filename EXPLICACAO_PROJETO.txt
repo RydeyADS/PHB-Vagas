@@ -1,0 +1,232 @@
+================================================================================
+  EXPLICAÇÃO DETALHADA DO PROJETO — PORTAL DE VAGAS PHB
+  (Linguagem simples para iniciantes)
+================================================================================
+
+1. O QUE FOI DESENVOLVIDO
+--------------------------------------------------------------------------------
+
+Criamos um site de um portal de vagas de emprego chamado "PHB Vagas"
+com 3 telas principais:
+
+  TELA 1 - HOME
+  ~~~~~~~~~~~~~
+  Página inicial completa com:
+  - Barra de navegação (navbar) com logo, links e menu responsivo
+  - Seção hero com título chamativo e botões "Ver Vagas" e
+    "Empresas Parceiras"
+  - Seção "Vagas em Destaque" com 6 cards de empregos fictícios
+  - Seção "Por que usar o Vagas PHB?" com 3 cards de benefícios
+  - Rodapé (footer) com informações, links e contato
+
+  TELA 2 - VAGAS
+  ~~~~~~~~~~~~~~
+  - Lista com 3 vagas de emprego fictícias
+  - Cada vaga mostra o cargo, a empresa e um botão "Candidatar-se"
+  - Botão "Voltar para Home" para retornar
+
+  TELA 3 - CANDIDATURA
+  ~~~~~~~~~~~~~~~~~~~~
+  - Formulário com campos Nome, Email e Telefone
+  - Ao clicar em "Enviar Candidatura":
+    * Aparece mensagem de sucesso
+    * Os dados são mostrados no Console do navegador (F12)
+
+
+2. TECNOLOGIAS UTILIZADAS (explicação simples)
+--------------------------------------------------------------------------------
+
+  VITE
+  ~~~~
+  É como um "servidorzinho" que roda no seu computador enquanto
+  você programa. Ele mostra o site no navegador e atualiza
+  automaticamente quando você salva um arquivo.
+
+  BOOTSTRAP 5
+  ~~~~~~~~~~~
+  É uma biblioteca de estilos prontos. Em vez de escrever CSS,
+  usamos classes como "btn-primary" para criar botões azuis,
+  "container" para centralizar o conteúdo, "card" para criar
+  cartões, etc. Tudo apenas com classes no HTML.
+
+  JAVASCRIPT
+  ~~~~~~~~~~
+  JavaScript puro (sem React) para:
+  - Carregar cada tela dentro da página
+  - Capturar dados do formulário
+  - Mostrar mensagens de sucesso
+  - Navegar entre as telas
+
+  HTML
+  ~~~~
+  Estrutura do site. Cada tela tem seu próprio arquivo HTML.
+
+
+3. ESTRUTURA DO PROJETO (o que cada pasta/arquivo faz)
+--------------------------------------------------------------------------------
+
+  index.html
+  ~~~~~~~~~~
+  Arquivo principal. Contém uma <div id="app"> vazia e um <script>
+  que carrega o src/main.js. É como o "esqueleto" da página.
+
+  src/main.js
+  ~~~~~~~~~~~
+  Ponto de entrada. Faz 3 coisas:
+  1. Importa o CSS do Bootstrap
+  2. Importa o JavaScript do Bootstrap (para navbar funcionar)
+  3. Carrega o conteúdo da Home (Hemerson/home.html) dentro da página
+  4. Escuta o clique no botão "Ver Vagas" para chamar carregarVagas()
+
+  Hemerson/home.html
+  ~~~~~~~~~~~~~~~~~~
+  A página inicial criada pelo Hemerson. Contém:
+  - Navbar com logo, links e menu responsivo
+  - Seção hero com título, descrição e botões
+  - 6 cards de vagas em destaque
+  - 3 cards de benefícios
+  - Footer com informações de contato
+
+  Diego/vagas.js
+  ~~~~~~~~~~~~~~~
+  A navegação criada pelo Diego. Contém a função carregarVagas()
+  que:
+  - Monta o HTML com a lista de vagas
+  - Para cada vaga, chama gerarCard() para criar um card
+  - Adiciona evento de clique nos botões "Candidatar-se"
+  - Carrega o formulário de candidatura
+  - Captura dados do formulário e mostra no console
+  - Exibe mensagem de sucesso
+
+  Kayo/dados.js
+  ~~~~~~~~~~~~~
+  Lista com 3 vagas de emprego (cargo + empresa). Funciona como
+  um "banco de dados" dentro do código.
+
+  Kayo/funcoes.js
+  ~~~~~~~~~~~~~~~
+  Função gerarCard() que recebe uma vaga e retorna o HTML de um
+  card Bootstrap pronto para ser exibido.
+
+  public/candidatura.html
+  ~~~~~~~~~~~~~~~~~~~~~~~
+  Formulário de candidatura com campos Nome, Email e Telefone.
+  Fica na pasta public/ porque é um arquivo estático.
+
+  public/imagens/logo-phb-vagas.svg
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  Logotipo do portal em formato SVG (vetor).
+
+
+4. FLUXO COMPLETO (passo a passo para iniciantes)
+--------------------------------------------------------------------------------
+
+  1. O usuário abre o navegador e acessa o site
+  2. O Vite envia o arquivo index.html
+  3. index.html carrega src/main.js
+  4. main.js carrega o Bootstrap (CSS + JS)
+  5. main.js busca Hemerson/home.html com fetch()
+  6. O conteúdo da Home aparece na tela (navbar, hero, cards, footer)
+  7. Usuário clica no botão "Ver Vagas"
+  8. main.js chama carregarVagas() (em Diego/vagas.js)
+  9. carregarVagas() importa os dados do Kayo e a função gerarCard()
+  10. Monta e exibe a lista de vagas
+  11. Usuário clica em "Candidatar-se" em uma vaga
+  12. Diego/vagas.js busca public/candidatura.html
+  13. O formulário aparece na tela
+  14. Usuário preenche e clica "Enviar Candidatura"
+  15. O JavaScript captura os dados e mostra no Console
+  16. Aparece uma mensagem de sucesso na tela
+  17. Usuário clica "Voltar para Home" para recomeçar
+
+
+5. MUDANÇAS RECENTES (o que foi alterado)
+--------------------------------------------------------------------------------
+
+  ANTES:
+  - Diego era responsável pela Home (Diego/home.html)
+  - Hemerson era responsável pelas Vagas (Hemerson/vagas.js)
+
+  DEPOIS:
+  - Hemerson criou uma nova Home mais completa (Hemerson/home.html)
+  - Diego assumiu as Vagas e navegação (Diego/vagas.js)
+  - O arquivo Diego/home.html foi removido
+  - O arquivo Hemerson/vagas.js foi removido
+  - A logo do portal foi adicionada (public/imagens/)
+  - Bootstrap JS foi adicionado para o menu responsivo
+
+
+6. CLASSES BOOTSTRAP UTILIZADAS
+--------------------------------------------------------------------------------
+
+  Navbar:     navbar, navbar-expand-lg, navbar-dark, bg-primary,
+              navbar-brand, navbar-toggler, collapse, navbar-nav,
+              ms-auto, nav-item, nav-link
+
+  Tipografia: display-3, fw-bold, lead
+
+  Botões:     btn, btn-outline-primary, btn-lg, btn-primary,
+              btn-success, btn-secondary
+
+  Cards:      card, card-body, card-title, card-text, h-100,
+              shadow, shadow-sm, border-0, rounded-4
+
+  Grid:       container, row, col-md-4, col-md-6, col-md-8,
+              justify-content-center
+
+  Formulário: form-label, form-control, mb-3, d-grid
+
+  Alertas:    alert, alert-success, alert-heading
+
+  Espaçamento: mt-5, mb-4, mb-3, py-5, px-5, me-2
+
+  Utilitários: text-center, text-white, text-muted, bg-primary,
+               list-unstyled, text-decoration-none
+
+
+7. DICAS PARA INICIANTES
+--------------------------------------------------------------------------------
+
+  - export / import: São usados para compartilhar código entre
+    arquivos JavaScript. Um arquivo "exporta" uma função ou dado,
+    outro arquivo "importa" para usar.
+
+  - fetch(): Função do JavaScript que busca arquivos. Aqui usamos
+    para carregar o HTML de cada tela.
+
+  - innerHTML: Substitui o conteúdo de um elemento. Trocamos de
+    tela apagando o conteúdo atual e colocando o novo.
+
+  - addEventListener: "Escuta" um evento (clique, submit) e executa
+    uma função quando ele acontece.
+
+  - console.log(): Mostra informações no Console do navegador
+    (F12). Útil para programadores verificarem se os dados
+    estão corretos.
+
+  - public/: No Vite, arquivos nesta pasta são servidos na raiz
+    do site. Ex: /candidatura.html serve public/candidatura.html
+
+  - data-bs-toggle: Atributo do Bootstrap JS que ativa componentes
+    como o menu collapsible da navbar.
+
+
+8. COMO EXECUTAR
+--------------------------------------------------------------------------------
+
+  Passo 1: Abrir o terminal na pasta do projeto
+
+  Passo 2: Instalar as dependências
+  npm install
+
+  Passo 3: Iniciar o servidor
+  npm run dev
+
+  Passo 4: Abrir http://localhost:5173 no navegador
+
+  Para teste: Clique em "Ver Vagas" → "Candidatar-se" → preencha
+  o formulário → "Enviar" → veja a mensagem de sucesso.
+  Abra o Console (F12) para ver os dados registrados.
+
+
+LEMBRANDO QUE DEVE TER O NODE INSTALADO

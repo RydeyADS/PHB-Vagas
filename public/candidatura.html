@@ -1,0 +1,77 @@
+<!-- 
+    ============================================================
+    ARQUIVO: public/candidatura.html
+    RESPONSÁVEL: Vinicius (Layout) / Hemerson (Funcionalidade)
+    DESCRIÇÃO: Formulário de candidatura. Contém campos para
+               Nome, Email e Telefone. O envio é processado
+               pelo JavaScript em vagas.js.
+    ============================================================
+-->
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+
+            <!-- Card que envolve o formulário -->
+            <div class="card shadow-sm">
+                <div class="card-body">
+
+                    <!-- Título do formulário -->
+                    <h2 class="card-title text-center mb-4">
+                        Formulário de Candidatura
+                    </h2>
+
+                    <!-- Formulário -->
+                    <form id="formCandidatura">
+
+                        <!-- Campo: Nome -->
+                        <div class="mb-3">
+                            <label for="nome" class="form-label">Nome</label>
+                            <input 
+                                type="text" 
+                                class="form-control" 
+                                id="nome" 
+                                placeholder="Digite seu nome completo" 
+                                required
+                            >
+                        </div>
+
+                        <!-- Campo: Email -->
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input 
+                                type="email" 
+                                class="form-control" 
+                                id="email" 
+                                placeholder="Digite seu email" 
+                                required
+                            >
+                        </div>
+
+                        <!-- Campo: Telefone -->
+                        <div class="mb-3">
+                            <label for="telefone" class="form-label">Telefone</label>
+                            <input 
+                                type="tel" 
+                                class="form-control" 
+                                id="telefone" 
+                                placeholder="Digite seu telefone" 
+                                required
+                            >
+                        </div>
+
+                        <!-- Botão de envio -->
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary">
+                                Enviar Candidatura
+                            </button>
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,81 @@
+EXPLICAÇÃO DA PARTE - KAYO
+Disciplina: ux/ui dsigner
+Projeto: Portal de Vagas PHB - Parnaíba PI
+
+========================================
+ARQUIVOS DESENVOLVIDOS
+========================================
+
+1. dados.js
+2. funcoes.js
+
+========================================
+1. DADOS.JS
+========================================
+
+O que é:
+  Arquivo responsável por armazenar as vagas do portal.
+
+O que contém:
+  Um array chamado "vagas" com 3 objetos, onde cada objeto
+  representa uma vaga de emprego com as seguintes propriedades:
+
+  - id       → número único que identifica cada vaga
+  - titulo   → nome do cargo
+  - empresa  → nome da empresa
+  - local    → cidade da vaga
+  - salario  → valor do salário formatado
+  - tipo     → tipo de contrato (CLT ou PJ)
+  - descricao → breve descrição das atividades
+
+Por que usamos "export":
+  O export torna o array disponível para outros arquivos
+  do projeto importarem. No caso, o arquivo vagas.js do
+  Diego importa esse array para exibir as vagas na página.
+
+========================================
+2. FUNCOES.JS
+========================================
+
+O que é:
+  Arquivo responsável por gerar o HTML de cada card de vaga
+  dinamicamente com JavaScript.
+
+O que contém:
+  Uma função chamada "gerarCardVaga" que recebe um objeto
+  de vaga como parâmetro e retorna uma string HTML com o
+  card Bootstrap montado.
+
+Recursos utilizados:
+
+  - export function → exporta a função para outros arquivos
+  - Parâmetro (vaga) → recebe o objeto de vaga
+  - if (!vaga) return "" → verificação de segurança, evita
+    erro caso a função seja chamada sem parâmetro
+  - Template literal (crases) → permite escrever HTML em
+    várias linhas dentro do JavaScript
+  - ${vaga.propriedade} → injeta os dados do objeto
+    diretamente no HTML gerado
+  - data-id → guarda o id da vaga no botão para o Diego
+    identificar qual vaga o usuário clicou
+
+Classes Bootstrap utilizadas:
+  - col-md-4    → divide a tela em 3 colunas
+  - card        → componente de cartão do Bootstrap
+  - h-100       → altura total do card
+  - shadow      → sombra no card
+  - border-0    → remove a borda padrão
+  - card-body   → área interna do card
+  - card-title  → título do card
+  - card-text   → texto do card
+  - btn btn-outline-primary → botão estilizado
+
+========================================
+COMO OS ARQUIVOS SE CONECTAM
+========================================
+
+  dados.js  →  exporta o array "vagas"
+                        ↓
+  funcoes.js →  exporta a função "gerarCardVaga"
+                        ↓
+  Diego/vagas.js → importa os dois e monta a página.

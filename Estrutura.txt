@@ -1,0 +1,31 @@
+ATV-LUIS/
+│
+├── Diego/
+│   ├── vagas.js           ← Navegação, listagem de vagas e formulário
+│   └── Exp.txt
+│
+├── Hemerson/
+│   ├── home.html          ← Tela inicial (navbar, hero, destaques, footer)
+│   └── Exp.txt
+│
+├── Kayo/
+│   ├── dados.js           ← Lista de vagas (dados)
+│   ├── funcoes.js         ← Função geradora de cards
+│   └── Exp.txt
+│
+├── Vinicius/
+│   └── Exp.txt            ← Componentes Bootstrap e layout
+│
+├── public/
+│   ├── imagens/
+│   │   └── logo-phb-vagas.svg   ← Logotipo do portal
+│   └── candidatura.html   ← Formulário de candidatura
+│
+├── src/
+│   └── main.js            ← Ponto de entrada (Vite)
+│
+├── index.html             ← HTML principal
+├── package.json           ← Dependências do projeto
+├── README.md
+├── EXPLICACAO_PROJETO.txt
+└── Estrutura.txt

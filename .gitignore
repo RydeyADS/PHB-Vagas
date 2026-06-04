@@ -1,0 +1,31 @@
+cat > .gitignore << EOF
+# Dependências Node.js
+node_modules/
+package-lock.json
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Pastas geradas
+dist/
+build/
+public/build/
+
+# Arquivos do sistema
+.DS_Store
+Thumbs.db
+*.log
+
+# Pastas de editores e caches
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Outros projetos e arquivos da home (importante!)
+../
+../../
+../../../
+!.gitignore
+!README.md
+EOF
