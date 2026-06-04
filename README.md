@@ -81,3 +81,8 @@ O projeto possui 3 telas que se alternam sem recarregar a página:
 - Sem banco de dados, API ou PHP
 - Sem frameworks JavaScript além do Bootstrap
 - Código comentado para fácil entendimento
+
+<p align="center">
+  <img src="https://i.giphy.com/1zZ9IIFeFEVLaeqzOq.webp" width="300">
+</p>
+  <h1 align="center"> da um git clone ai gaiato lero lero</h1>
