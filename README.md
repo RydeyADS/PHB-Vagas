@@ -1,6 +1,9 @@
 # Portal de Vagas PHB
 
-Projeto acadêmico de um portal de vagas de emprego para Parnaíba - PI, desenvolvido como trabalho da disciplina utilizando **Vite + Bootstrap 5 + JavaScript**.
+Projeto acadêmico desenvolvido para a disciplina do curso de Análise e Desenvolvimento de Sistemas da UNINASSAU – Parnaíba.
+
+O projeto consiste em uma aplicação web para divulgação de oportunidades de emprego e apresentação de empresas parceiras, desenvolvida **utilizando HTML5, JavaScript ES6, Bootstrap 5 e Vite**.
+
 
 ## Equipe e Responsabilidades
 
@@ -39,13 +42,21 @@ Para ver os dados de candidatura no console: `F12` → aba **Console**.
 ## Estrutura do projeto
 
 ```
-ATV-LUIS/
+ATV-LUISMAGAO/
+│
+├── ARTIGO                   ←  O artigo científico do projeto encontra-se nesta pasta
+│   ├── ARTIGO-PHB-VAGAS.docx
+│   └── ARTIGO-PHB-VAGAS.pdf
 ├── Diego/
 │   ├── vagas.js           ← Navegação, listagem de vagas, formulário
 │   └── Exp.txt
 ├── Hemesson/
 │   ├── home.html          ← Tela inicial (navbar, hero, destaques, footer)
 │   └── Exp.txt
+├── IMAGENS-ARTIGO              ← As figuras utilizadas no artigo encontram-se nessa pasta    
+│   ├── EMPRESAS-PARCEIRAS.png          
+│   ├── HOME.png         
+│   └── VAGAS.png
 ├── Kayo/
 │   ├── dados.js           ← Dados das 3 vagas fictícias
 │   ├── funcoes.js         ← Função que gera cards Bootstrap
@@ -86,3 +97,25 @@ O projeto possui 3 telas que se alternam sem recarregar a página:
   <img src="https://i.giphy.com/1zZ9IIFeFEVLaeqzOq.webp" width="300">
 </p>
   <h1 align="center"> da um git clone ai gaiato lero lero</h1>
+
+## Artigo Científico
+
+O artigo científico referente ao desenvolvimento do sistema encontra-se disponível na pasta:
+
+/ARTIGO
+
+Arquivos disponíveis:
+
+ARTIGO-PHB-VAGAS.pdf
+ARTIGO-PHB-VAGAS.docx
+
+O artigo apresenta a fundamentação teórica, metodologia utilizada, arquitetura do sistema, tecnologias empregadas, resultados obtidos e contribuições dos integrantes da equipe.
+
+Repositório
+
+Este repositório contém:
+
+Código-fonte completo da aplicação;
+Artigo científico em formato PDF e DOCX;
+Imagens utilizadas no artigo;
+Histórico de commits realizados durante o desenvolvimento do projeto.
