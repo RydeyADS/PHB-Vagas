@@ -9,7 +9,7 @@ própria. Meu CSS veio pra complementar o Bootstrap, deixando tudo mais
 bonito sem quebrar nada que já funcionava.
 
 Eu não mexi em nenhum HTML, nem nos arquivos JavaScript do Diego, Kayo
-ou Hemerson. Só adicionei um link pro style.css no index.html e pronto.
+ou Hemesson. Só adicionei um link pro style.css no index.html e pronto.
 
 COMO OS CARDS FORAM ESTILIZADOS
 --------------------------------

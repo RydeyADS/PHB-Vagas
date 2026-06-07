@@ -6,13 +6,13 @@ Projeto acadêmico de um portal de vagas de emprego para Parnaíba - PI, desenvo
 
 | Integrante | Responsabilidade |
 |------------|-----------------|
-| **Hemerson** | Tela inicial (Home) — navbar, hero, vagas em destaque, footer |
+| **Hemesson** | Tela inicial (Home) — navbar, hero, vagas em destaque, footer |
 | **Diego** | Vagas e navegação — listar vagas, processar formulário de candidatura |
 | **Kayo** | Dados e funções — lista de vagas, função geradora de cards |
 | **Vinicius** | Design e Bootstrap — escolha de componentes e organização do layout |
 
-> **Mudanças recentes:** As responsabilidades de Diego e Hemerson foram trocadas.
-> Hemerson agora é responsável pela Home, e Diego pelas Vagas e navegação.
+> **Mudanças recentes:** As responsabilidades de Diego e Hemesson foram trocadas.
+> Hemesson agora é responsável pela Home, e Diego pelas Vagas e navegação.
 
 ## Tecnologias
 
@@ -43,7 +43,7 @@ ATV-LUIS/
 ├── Diego/
 │   ├── vagas.js           ← Navegação, listagem de vagas, formulário
 │   └── Exp.txt
-├── Hemerson/
+├── Hemesson/
 │   ├── home.html          ← Tela inicial (navbar, hero, destaques, footer)
 │   └── Exp.txt
 ├── Kayo/

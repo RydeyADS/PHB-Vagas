@@ -4,7 +4,7 @@ ATV-LUIS/
 │   ├── vagas.js           ← Navegação, listagem de vagas e formulário
 │   └── Exp.txt
 │
-├── Hemerson/
+├── Hemesson/
 │   ├── home.html          ← Tela inicial (navbar, hero, destaques, footer)
 │   └── Exp.txt
 │

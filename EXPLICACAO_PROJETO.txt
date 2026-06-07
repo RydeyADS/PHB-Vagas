@@ -75,12 +75,12 @@ com 3 telas principais:
   Ponto de entrada. Faz 3 coisas:
   1. Importa o CSS do Bootstrap
   2. Importa o JavaScript do Bootstrap (para navbar funcionar)
-  3. Carrega o conteúdo da Home (Hemerson/home.html) dentro da página
+  3. Carrega o conteúdo da Home (Hemesson/home.html) dentro da página
   4. Escuta o clique no botão "Ver Vagas" para chamar carregarVagas()
 
-  Hemerson/home.html
+  Hemesson/home.html
   ~~~~~~~~~~~~~~~~~~
-  A página inicial criada pelo Hemerson. Contém:
+  A página inicial criada pelo Hemesson. Contém:
   - Navbar com logo, links e menu responsivo
   - Seção hero com título, descrição e botões
   - 6 cards de vagas em destaque
@@ -125,7 +125,7 @@ com 3 telas principais:
   2. O Vite envia o arquivo index.html
   3. index.html carrega src/main.js
   4. main.js carrega o Bootstrap (CSS + JS)
-  5. main.js busca Hemerson/home.html com fetch()
+  5. main.js busca Hemesson/home.html com fetch()
   6. O conteúdo da Home aparece na tela (navbar, hero, cards, footer)
   7. Usuário clica no botão "Ver Vagas"
   8. main.js chama carregarVagas() (em Diego/vagas.js)
@@ -145,13 +145,13 @@ com 3 telas principais:
 
   ANTES:
   - Diego era responsável pela Home (Diego/home.html)
-  - Hemerson era responsável pelas Vagas (Hemerson/vagas.js)
+  - Hemesson era responsável pelas Vagas (Hemesson/vagas.js)
 
   DEPOIS:
-  - Hemerson criou uma nova Home mais completa (Hemerson/home.html)
+  - Hemesson criou uma nova Home mais completa (Hemesson/home.html)
   - Diego assumiu as Vagas e navegação (Diego/vagas.js)
   - O arquivo Diego/home.html foi removido
-  - O arquivo Hemerson/vagas.js foi removido
+  - O arquivo Hemesson/vagas.js foi removido
   - A logo do portal foi adicionada (public/imagens/)
   - Bootstrap JS foi adicionado para o menu responsivo
 

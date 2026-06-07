@@ -1,6 +1,6 @@
 ================================================================================
-  ARQUIVO: Hemerson/Exp.txt
-  INTEGRANTE: Hemerson
+  ARQUIVO: Hemesson/Exp.txt
+  INTEGRANTE: Hemesson
   RESPONSABILIDADE: Home
   DISCIPLINA: Trabalho acadêmico — Portal de Vagas
 ================================================================================
@@ -23,7 +23,7 @@ Meu trabalho foi criar uma Home visualmente rica e profissional para
 o portal, inspirando confiança nos visitantes.
 
 
-ARQUIVO QUE CRIEI: Hemerson/home.html
+ARQUIVO QUE CRIEI: Hemesson/home.html
 ======================================
 
 O que esse arquivo faz:

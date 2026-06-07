@@ -18,7 +18,7 @@ export const vagas = [
   {
     id: 2,
     titulo: "Analista de Sistemas",
-    empresa: "Empresa Castanha",
+    empresa: "Empresa Castanha Tech",
     local: "Parnaíba - PI",
     salario: "R$ 3.200,00",
     tipo: "CLT",
@@ -32,7 +32,31 @@ export const vagas = [
     salario: "R$ 1.500,00",
     tipo: "CLT",
     descricao: "Atendimento ao público, controle de documentos e suporte administrativo.",
+  }
+];
+
+export const empresasParceiras = [
+  {
+    id: 1,
+    nome: "Tech Solutions",
+    area: "Tecnologia",
+    cidade: "Parnaíba - PI",
+    descricao: "Empresa voltada ao desenvolvimento de sistemas web e soluções digitais."
   },
+  {
+    id: 2,
+    nome: "Empresa Castanha Tech",
+    area: "Indústria e Comércio",
+    cidade: "Parnaíba - PI",
+    descricao: "Empresa parceira com atuação no setor administrativo e comercial."
+  },
+  {
+    id: 3,
+    nome: "Comércio PHB Ltda.",
+    area: "Comércio",
+    cidade: "Parnaíba - PI",
+    descricao: "Empresa local que oferece oportunidades para atendimento e administração."
+  }
 
   // Exporta as vagas para serem usadas em outros arquivos do projeto.
 ];

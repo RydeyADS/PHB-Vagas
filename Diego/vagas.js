@@ -7,7 +7,7 @@
 import { vagas } from '../Kayo/dados.js';
 
 // Importa a função que gera o card de cada vaga (criada pelo Kayo)
-import { gerarCardVaga } from '/Kayo/funcoes.js';
+import { gerarCardVaga } from '../Kayo/funcoes.js';
 
 // Função principal que carrega e exibe a lista de vagas
 export function carregarVagas() {
